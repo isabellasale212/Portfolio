@@ -303,6 +303,47 @@ footer{ border-top:1px solid var(--line); padding:30px 0 52px; }
 .cs-phones img{ width:100%; height:auto; display:block; border-radius:12px; border:1px solid var(--line); box-shadow:var(--shadow); background:#fff; }
 .cs-phones .pcap{ font-family:var(--mono); font-size:10.5px; color:var(--mute); text-align:center; margin-top:9px; letter-spacing:.03em; }
 
-.reveal{ opacity:0; transform:translateY(14px); transition:opacity .55s ease,transform .55s ease; }
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease,transform .6s ease; }
 .reveal.in{ opacity:1; transform:none; }
 @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+/* ---------------- vibrancy pass ---------------- */
+/* hero depth: soft colour glows behind the content */
+.hero{ position:relative; overflow:hidden; }
+.hero::before{ content:""; position:absolute; top:-160px; right:-140px; width:640px; height:640px; border-radius:50%;
+  background:radial-gradient(circle, color-mix(in srgb,var(--accent) 22%, transparent), transparent 62%); filter:blur(10px); z-index:0; pointer-events:none; }
+.hero::after{ content:""; position:absolute; bottom:-180px; left:-120px; width:500px; height:500px; border-radius:50%;
+  background:radial-gradient(circle, color-mix(in srgb,var(--warm) 15%, transparent), transparent 62%); filter:blur(10px); z-index:0; pointer-events:none; }
+.hero .hero-grid{ position:relative; z-index:1; }
+
+/* gradient on the emphasised hero words */
+.hero h1 em{ font-style:italic; background:linear-gradient(115deg,var(--accent),var(--hot)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+/* eyebrow gets a small accent tick */
+.eyebrow{ display:inline-flex; align-items:center; gap:10px; }
+.eyebrow::before{ content:""; width:16px; height:2px; border-radius:2px; background:var(--accent); flex:none; }
+
+/* colour-coded big numbers */
+.tn.cool{ color:var(--cool); } .tn.warm{ color:var(--warm); } .tn.hot{ color:var(--hot); }
+
+/* primary CTA gets lift + subtle gradient */
+.btn.primary{ background:linear-gradient(120deg,var(--accent),color-mix(in srgb,var(--accent) 62%,var(--cool))); box-shadow:0 6px 20px color-mix(in srgb,var(--accent) 32%,transparent); }
+.btn.primary:hover{ box-shadow:0 8px 26px color-mix(in srgb,var(--accent) 42%,transparent); }
+
+/* project cards reveal the intensity ramp on hover */
+.card::after{ content:""; position:absolute; left:0; top:0; height:3px; width:0; background:linear-gradient(90deg,var(--cool),var(--warm),var(--hot)); transition:width .45s ease; z-index:3; }
+.card:hover::after{ width:100%; }
+
+/* staggered entrance within grids */
+.caps .cap:nth-child(2), .method-steps .step:nth-child(2), .research .rcard:nth-child(2){ transition-delay:.09s; }
+.caps .cap:nth-child(3), .method-steps .step:nth-child(3){ transition-delay:.18s; }
+.caps .cap:nth-child(4){ transition-delay:.27s; }
+
+/* count-up: avoid layout shift while numbers animate */
+.countup{ font-variant-numeric:tabular-nums; }
+
+/* case-study figures lift a touch on hover */
+.cs-fig .frame{ transition:transform .25s ease, box-shadow .25s ease; }
+.cs-fig .frame:hover{ transform:translateY(-3px); }
+.cs-phones img{ transition:transform .25s ease; }
+.cs-phones figure:hover img{ transform:translateY(-4px); }
