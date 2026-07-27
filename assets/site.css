@@ -246,6 +246,47 @@ footer{ border-top:1px solid var(--line); padding:30px 0 52px; }
 .demo-banner{ background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin-top:22px; font-size:13.5px; color:var(--dim); display:flex; gap:10px; align-items:flex-start; }
 .demo-banner b{ color:var(--ink); }
 
+/* code panel */
+.code{ background:#0E141A; border:1px solid var(--line); border-radius:12px; overflow:hidden; margin-top:26px; box-shadow:var(--shadow); }
+.code .chd{ display:flex; align-items:center; justify-content:space-between; padding:10px 15px; border-bottom:1px solid #22303B; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:#7C8B96; }
+.code .chd .dots{ display:inline-flex; gap:6px; }
+.code .chd .dots i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.code pre{ margin:0; padding:18px 18px; overflow-x:auto; font-family:var(--mono); font-size:12.5px; line-height:1.7; color:#D7E0E6; }
+.code .cmt{ color:#6B7C88; }
+.code .kw{ color:#7FB2E8; }
+.code .str{ color:#8FC7A0; }
+.code .fn{ color:#E1B061; }
+.code-cap{ font-family:var(--mono); font-size:10.5px; color:var(--mute); margin-top:12px; letter-spacing:.02em; }
+
+/* interactive dashboard */
+.dsh{ background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden; margin-top:30px; }
+.dsh-controls{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:16px 20px; border-bottom:1px solid var(--line); }
+.dsh-controls .lbl{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); margin-right:4px; }
+.pill{ font-family:var(--mono); font-size:11px; letter-spacing:.02em; padding:7px 12px; border-radius:20px; border:1px solid var(--line2); background:transparent; color:var(--dim); cursor:pointer; transition:background .12s,border-color .12s,color .12s; }
+.pill:hover{ border-color:var(--accent); color:var(--ink); }
+.pill.active{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.dsh-tiles{ display:grid; grid-template-columns:repeat(5,1fr); border-bottom:1px solid var(--line); }
+@media (max-width:700px){ .dsh-tiles{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:460px){ .dsh-tiles{ grid-template-columns:repeat(2,1fr); } }
+.dtile{ padding:16px 18px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.dtile .dl{ font-family:var(--mono); font-size:9px; letter-spacing:.09em; text-transform:uppercase; color:var(--mute); }
+.dtile .dn{ font-family:var(--mono); font-weight:600; font-size:23px; margin-top:5px; letter-spacing:-.02em; transition:color .2s; }
+.dtile .dn small{ font-size:11px; color:var(--dim); font-weight:400; }
+.dsh-chart{ padding:18px 20px 6px; }
+.dsh-chart .chead{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; gap:10px; flex-wrap:wrap; }
+.dsh-chart .ctitle{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); }
+.toggle{ display:inline-flex; border:1px solid var(--line2); border-radius:7px; overflow:hidden; }
+.toggle button{ font-family:var(--mono); font-size:10.5px; padding:5px 12px; background:transparent; color:var(--dim); border:0; cursor:pointer; }
+.toggle button.on{ background:var(--accent); color:var(--accent-ink); }
+.dsh-chart svg{ width:100%; height:auto; display:block; }
+.dsh-chart svg text{ font-family:var(--mono); }
+.dsh-zones{ padding:6px 20px 20px; }
+.dsh-zones .ztitle{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); margin-bottom:8px; }
+.zbar{ display:flex; height:22px; border-radius:5px; overflow:hidden; border:1px solid var(--line); }
+.zbar i{ height:100%; transition:width .35s ease; }
+.zlegend{ display:flex; flex-wrap:wrap; gap:13px; margin-top:10px; font-family:var(--mono); font-size:10px; color:var(--dim); }
+.zlegend span{ display:inline-flex; align-items:center; gap:6px; }
+
 /* phone screenshot gallery */
 .cs-phones{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:30px; }
 @media (max-width:820px){ .cs-phones{ grid-template-columns:repeat(2,1fr); } }
