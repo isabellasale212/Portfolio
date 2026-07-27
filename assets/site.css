@@ -148,6 +148,11 @@ section{ padding-top:96px; }
 .cv-block{ margin-top:30px; }
 .cv-block p{ font-size:16px; color:var(--muted); margin-top:8px; line-height:1.55; }
 
+/* ---- CV embed (the real PDF) ---- */
+.cv-embed{ max-width:1000px; margin-top:52px; background:var(--sheet); border-radius:2px; box-shadow:0 3px 10px rgba(45,43,43,.16); overflow:hidden; }
+.cv-embed object{ width:100%; aspect-ratio:1000/1414; display:block; border:0; background:var(--sheet); }
+@media (max-width:900px){ .cv-embed{ margin-top:32px; } }
+
 /* ---- interests (centred) ---- */
 .interests{ text-align:center; }
 .int-kickrow{ display:inline-flex; align-items:center; gap:14px; justify-content:center; }
