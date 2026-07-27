@@ -122,7 +122,7 @@ var CASES = [
  { kick:"Applied project · Team build", sub:"Real project · built for a team",
    title:"Lacrosse Team App",
    stand:"A real app I built to run a university women's lacrosse squad from one place — schedule, daily check-ins, profiles, matches and a playbook, all wired to a relational data backend.",
-   meta:[["Role","Data model, build & rollout"],["Build","No-code app · Google Sheets backend"],["Users","A full squad, 2025–26 season"],["Screens","5 · relational data"]],
+   meta:[["Role","Data model, build & rollout"],["Build","AppSheet · Python"],["Users","A full squad, 2025–26 season"],["Screens","5 · relational data"]],
    blocks:[
     {h:"The brief"},
     {p:["A student team runs on scattered group chats and a graveyard of spreadsheets — schedule here, wellness there, drills nowhere. I built one app that pulls it together and, crucially, collects athlete-monitoring data the coaches can actually use. Five things in every player's pocket: this week's sessions, a 30-second daily check-in, their own profile and stats, upcoming matches, and the playbook."]},
