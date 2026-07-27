@@ -1,12 +1,11 @@
-# Isabella Sale — Performance & Physiological Data Portfolio
+# Isabella Sale — Portfolio
 
-Live site: **https://isabellasale212.github.io/Work-Portfolio/**
+Live: **https://isabellasale212.github.io/Portfolio/**
 
-Turning athlete GPS and wearable data into load monitoring, session reports and readiness —
-with Python, Power BI and Excel. BSc (Hons) Sport & Exercise Science, University of Bath.
+A single-page sports-science / performance-data portfolio in a "Broadsheet" (editorial) style —
+Source Serif 4, ink on paper, cyan + magenta spot colour. Six projects open as case-study overlays;
+one (Squad Training Report) contains a live interactive dashboard on real Catapult GPS data.
 
-## In this repo
-- **`index.html`** — the portfolio site (open the live link above)
-- **`notebooks/gps_session_analysis.ipynb`** — full GPS analysis (code + charts, rendered by GitHub)
-- **`code/session_report.py`** — reproducible session-report script
-- **`case-studies/`** — GPS report, interactive dashboard, ACWR, readiness, lacrosse app, dissertation
+- `index.html` — the site
+- `assets/site.css`, `assets/site.js`, `assets/session_data.js` — styles, logic, dashboard data
+- `notebooks/`, `code/` — the GPS analysis notebook and reproducible script
