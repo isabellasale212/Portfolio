@@ -320,7 +320,8 @@ html.js .reveal.in{ opacity:1; transform:none; }
 .pcard-img{ position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--panel2); border-bottom:1px solid var(--line); }
 .pcard-img img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
 .pcard:hover .pcard-img img{ transform:scale(1.05); }
-.pcard-img.contain img{ object-fit:contain; padding:14px; }
+.pcard-img.contain{ background:#fff; }
+.pcard-img.contain img{ object-fit:contain; padding:16px; }
 .pcard-img.top img{ object-position:top; }
 .pcard-tag{ position:absolute; top:12px; left:12px; display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:5px 10px; border-radius:20px; background:color-mix(in srgb,var(--panel) 82%, transparent); backdrop-filter:blur(6px); border:1px solid var(--line); }
 .pcard-tag .d{ width:6px; height:6px; border-radius:50%; background:currentColor; }
