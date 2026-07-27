@@ -8,7 +8,7 @@ var PROJECTS = [
   {i:1,cat:"Power BI · Dashboard",badge:"Real data",title:"Squad Training Report",blurb:"A live, filterable squad dashboard — drill into any session or player.",thumb:"training_report.png"},
   {i:2,cat:"Research · Dissertation",badge:"Primary research",title:"Force-Plate Dissertation",blurb:"Does jump-test power transfer to change-of-direction braking? (r = −0.55)",thumb:"diss_qualisys.jpg"},
   {i:3,cat:"Applied project · App",badge:"Real project",title:"Lacrosse Team App",blurb:"A mobile app my squad uses every week, built on relational data.",thumb:"lax_checkin.png"},
-  {i:4,cat:"Recovery · Python",badge:"Real data",title:"Recovery & Readiness Analysis",blurb:"28 days of my own WHOOP recovery, HRV and sleep — analysed and visualised.",thumb:"whoop_recovery.png"},
+  {i:4,cat:"Recovery · Python",badge:"Real data",title:"Recovery & Readiness Analysis",blurb:"28 days of my own WHOOP recovery, HRV and sleep — with a cycle-aware, female-performance angle.",thumb:"whoop_recovery.png"},
   {i:5,cat:"Load monitoring · Python",badge:"Method demo",title:"Training Load Monitor (ACWR)",blurb:"Rolling ACWR flagging athlete-weeks outside the safe load range.",thumb:"acwr.png"}
 ];
 var CV_WORK = [
@@ -30,7 +30,7 @@ var CV_SKILLS = [
 var INTERESTS = [
   {n:"01",t:"Performance Analysis",b:"Turning training and match data into the physical reports coaches actually use."},
   {n:"02",t:"GPS & Tracking",b:"10 Hz Catapult data into intensity zones, Player Load and sprint demands."},
-  {n:"03",t:"Athlete Monitoring",b:"Wellness, ACWR and readiness — flagging injury risk before it becomes injury."},
+  {n:"03",t:"Female-Performance Monitoring",b:"Cycle-aware readiness, wellness and load — building monitoring that isn't blind to the athlete in front of it."},
   {n:"04",t:"Python",b:"Cleaning, modelling and automating analysis pipelines end to end."},
   {n:"05",t:"Power BI & Dashboards",b:"Interactive squad dashboards staff can explore, filter and drill into."},
   {n:"06",t:"Statistics & Research",b:"Force-plate signal processing and inferential stats, from my dissertation onward."}
@@ -152,6 +152,10 @@ var CASES = [
     {h:"What drives it"},
     {p:["Recovery isn't a black box. It tracks two markers pulling in opposite directions on a good day — HRV up, resting heart rate down. Plotting them together shows the signal behind the score."]},
     {img:"whoop_hrv.png",cap:"HRV (ms) and resting heart rate (bpm) across the month — the two inputs a readiness model leans on most."},
+    {h:"A female-performance angle"},
+    {p:["Most readiness models are cycle-blind — but female physiology shifts across the menstrual cycle, and that's exactly where female-performance tech (WHOOP's cycle features, Orreco's FitrWoman) is heading. My WHOOP journal logs menstruation, so I joined that flag to the recovery data and had a look."]},
+    {img:"cycle_recovery.png",cap:"Recovery, HRV, resting heart rate and sleep on menstruating vs non-menstruating days — my own data, one month."},
+    {callout:{k:"Read it honestly",p:"Over this month, sleep and recovery dipped a little around menstruation while HRV and resting heart rate actually looked favourable. With five menstruating days that's descriptive, not a finding — but the pipeline is the point. At squad scale, this is exactly the cycle-aware readiness analysis I'd want to run."}},
     {h:"What it shows"},
     {bul:[["A real wearable-data pipeline","— parsing a WHOOP export, cleaning dates and metrics, deriving zones in Python."],["Individual baselines","— sleep held strong (94% mean), so the dips came from load and HRV, not sleep. That's the read that changes a decision."],["Flagging that matters","— the two red days are the actionable bit: the mornings I'd have modified training."]]},
     {callout:{k:"Where it connects",p:"The lacrosse app collects the wellness inputs; the GPS report measures the load. Recovery is where they meet — the read that decides how hard tomorrow gets."}}
