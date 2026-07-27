@@ -1,6 +1,7 @@
 // shared: theme toggle (persists across pages) + scroll reveal
 (function(){
   var root = document.documentElement;
+  root.classList.add("js"); // enables scroll-reveal; without JS, content stays visible
   try { var saved = localStorage.getItem("theme"); if (saved) root.setAttribute("data-theme", saved); } catch(e){}
   function cur(){ return root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); }
   document.addEventListener("click", function(e){
